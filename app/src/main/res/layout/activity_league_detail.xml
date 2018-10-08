@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/imageViewBadge"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/imageViewJersey"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            tools:text="Liga española - 2018" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageViewWebSite"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_cloud_circle_black_24dp" />
+
+            <ImageView
+                android:id="@+id/imageViewFacebook"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/imageViewWebSite"
+                android:src="@mipmap/facebook" />
+
+            <ImageView
+                android:id="@+id/imageViewInstagram"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/imageViewFacebook"
+                android:src="@mipmap/instagram" />
+
+            <ImageView
+                android:id="@+id/imageViewTwitter"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/imageViewInstagram"
+                android:src="@mipmap/twitter" />
+
+            <ImageView
+                android:id="@+id/imageViewYoutube"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/imageViewTwitter"
+                android:src="@mipmap/youtube" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_event" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorBlack" />
+
+        <ListView
+            android:id="@+id/listViewEvents"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"></ListView>
+
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+
+
+
+
