@@ -1,4 +1,19 @@
 package com.example.data.repositories
 
-class LeagueRepository {
+import com.example.data.mapper.APITeamsMapper
+import com.example.data.mapper.ApiTeamMapper
+import com.example.data.model.ApiTeams
+import com.example.data.service.ILeagueService
+import com.example.domain.models.Teams
+import com.example.domain.repositories.ILeagueRepository
+import io.reactivex.Observable
+
+class LeagueRepository(private val mLeagueService: ILeagueService) : ILeagueRepository{
+
+
+    override fun getTeams(codeTeam: Int): Observable<Teams> {
+        return mLeagueService.getTeams(codeTeam).map {
+            APITeamsMapper.apply(it)
+        }
+    }
 }
