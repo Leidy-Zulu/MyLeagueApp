@@ -33,7 +33,7 @@ class ServiceModule {
 
     }
 
-//    @Provides
-//    @Singleton
-//    fun provideLeagueService(retrofit: Retrofit): ILeagueService = retrofit.create(ILeagueService::class.java)
+    @Provides
+    @Singleton
+    fun provideLeagueService(retrofit: Retrofit): ILeagueService = retrofit.create(ILeagueService::class.java)
 }
