@@ -1,5 +1,6 @@
-package com.example.domain.baseinteractor.interactos
+package com.example.domain.interactos.base
 
+import com.example.domain.interactos.base.IUseCase
 import io.reactivex.Observable
 import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers

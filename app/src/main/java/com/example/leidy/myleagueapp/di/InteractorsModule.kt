@@ -1,8 +1,9 @@
 package com.example.leidy.myleagueapp.di
 
 import com.example.data.di.RepositoryModule
-import com.example.domain.baseinteractor.interactos.IUseCase
-import com.example.domain.interactos.base.GetLeaguesInteractor
+import com.example.domain.interactos.GetLeaguesInteractor
+import com.example.domain.interactos.base.IUseCase
+
 import com.example.domain.models.Teams
 import com.example.domain.repositories.ILeagueRepository
 import dagger.Module

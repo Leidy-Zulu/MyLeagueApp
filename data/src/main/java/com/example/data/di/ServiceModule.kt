@@ -18,15 +18,15 @@ class ServiceModule {
     @Provides
     @Singleton
     fun provideBaseService(): Retrofit {
-//        val okHttpClient: OkHttpClient = OkHttpClient.Builder()
-//                .connectTimeout(TEN, TimeUnit.SECONDS)
-//                .writeTimeout(TEN, TimeUnit.SECONDS)
-//                .readTimeout(TEN, TimeUnit.SECONDS)
-//                .build()
+        val okHttpClient: OkHttpClient = OkHttpClient.Builder()
+                .connectTimeout(TEN, TimeUnit.SECONDS)
+                .writeTimeout(TEN, TimeUnit.SECONDS)
+                .readTimeout(TEN, TimeUnit.SECONDS)
+                .build()
 
         return Retrofit.Builder()
                 .baseUrl(URL_BASE)
-                .client(OkHttpClient())
+                .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()

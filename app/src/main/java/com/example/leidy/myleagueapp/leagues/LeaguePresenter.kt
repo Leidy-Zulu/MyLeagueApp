@@ -1,7 +1,7 @@
 package com.example.leidy.myleagueapp.leagues
 
 import android.util.Log
-import com.example.domain.baseinteractor.interactos.IUseCase
+import com.example.domain.interactos.base.IUseCase
 import com.example.domain.models.Teams
 import io.reactivex.disposables.CompositeDisposable
 
