@@ -1,8 +1,6 @@
 package com.example.leidy.myleagueapp.leagues
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import com.example.domain.models.Team
 import com.example.leidy.myleagueapp.R
@@ -13,7 +11,7 @@ import javax.inject.Inject
 import android.support.v7.widget.LinearLayoutManager
 import com.example.leidy.myleagueapp.adapters.TeamAdapter
 import android.content.Intent
-import com.example.leidy.myleagueapp.detail.DetailTeamActivity
+import com.example.leidy.myleagueapp.detailTeam.DetailTeamActivity
 import com.example.leidy.myleagueapp.utils.TEAM
 
 

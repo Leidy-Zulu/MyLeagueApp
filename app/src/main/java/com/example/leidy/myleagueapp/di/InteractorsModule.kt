@@ -1,8 +1,10 @@
 package com.example.leidy.myleagueapp.di
 
 import com.example.data.di.RepositoryModule
+import com.example.domain.interactos.GetEventsInteractor
 import com.example.domain.interactos.GetLeaguesInteractor
 import com.example.domain.interactos.base.IUseCase
+import com.example.domain.models.Events
 
 import com.example.domain.models.Teams
 import com.example.domain.repositories.ILeagueRepository
@@ -17,4 +19,9 @@ class InteractorsModule {
     @Singleton
     fun provideGetTeamsUseCase(iLeagueRepository: ILeagueRepository):
             IUseCase<Teams, Int> = GetLeaguesInteractor(iLeagueRepository)
+
+    @Provides
+    @Singleton
+    fun provideGetEventsUseCase(iLeagueRepository: ILeagueRepository):
+            IUseCase<Events, Int> = GetEventsInteractor(iLeagueRepository)
 }
