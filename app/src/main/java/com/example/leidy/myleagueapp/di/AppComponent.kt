@@ -12,6 +12,7 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [(AndroidSupportInjectionModule::class),
                 (AppModule::class),
+                (ActivityBuilder::class),
                 (InteractorsModule::class)])
 
 interface AppComponent: AndroidInjector<DaggerApplication> {
@@ -23,6 +24,4 @@ interface AppComponent: AndroidInjector<DaggerApplication> {
 
         fun build(): AppComponent
     }
-
-    fun inject(leagueActivity: LeagueActivity)
 }

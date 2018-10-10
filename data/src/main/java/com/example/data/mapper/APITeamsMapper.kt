@@ -10,7 +10,7 @@ object APITeamsMapper : Function<ApiTeams, Teams>{
 
     override fun apply(t: ApiTeams): Teams {
        return Teams(
-               t.teams
+               t.teams.map { ApiTeamMapper.apply(it) }
        )
     }
 }

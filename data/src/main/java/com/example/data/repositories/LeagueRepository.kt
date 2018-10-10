@@ -1,8 +1,6 @@
 package com.example.data.repositories
 
 import com.example.data.mapper.APITeamsMapper
-import com.example.data.mapper.ApiTeamMapper
-import com.example.data.model.ApiTeams
 import com.example.data.service.ILeagueService
 import com.example.domain.models.Teams
 import com.example.domain.repositories.ILeagueRepository

@@ -1,6 +1,5 @@
 package com.example.leidy.myleagueapp
 
-import android.app.Application
 import com.example.leidy.myleagueapp.di.AppComponent
 import com.example.leidy.myleagueapp.di.DaggerAppComponent
 import dagger.android.AndroidInjector
@@ -11,7 +10,6 @@ class App : DaggerApplication() {
 
     var mAppComponent: AppComponent? = null
 
-
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
         val component = DaggerAppComponent.builder()
                 .application(this)
@@ -20,10 +18,4 @@ class App : DaggerApplication() {
         component.inject(this)
         return component
     }
-
-    override fun onCreate() {
-        super.onCreate()
-        //DaggerAppComponent.builder()
-        }
-
 }

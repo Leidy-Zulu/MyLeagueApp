@@ -1,7 +1,7 @@
 package com.example.domain.models
 
 
-class Teams(val teams: ArrayList<Team>) {
+class Teams(val teams: List<Team>) {
 
 
 }
