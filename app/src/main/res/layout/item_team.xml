@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardViewTeam"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
@@ -27,7 +28,7 @@
             android:id="@+id/textViewName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/imageViewBadge"
+            android:layout_toEndOf="@id/imageViewBadge"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             tools:text="Liga de españa" />
 
