@@ -12,5 +12,5 @@ interface ILeagueService {
     fun getTeams(@Query("id") codeTeam: Int) : Observable<ApiTeams>
 
     @GET("eventsnext.php")
-    fun getEvents(codeEvent: Int): Observable<ApiEvents>
+    fun getEvents(@Query("id")codeEvent: Int): Observable<ApiEvents>
 }
