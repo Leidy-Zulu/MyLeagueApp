@@ -19,9 +19,5 @@ class LeagueRepository(private val mLeagueService: ILeagueService) : ILeagueRepo
         }
     }
 
-    override fun getEvents(codeEvent: Int): Observable<Events> {
-        return mLeagueService.getEvents(codeEvent).map{
-            ApiEventsMapper.apply(it)
-        }
-    }
+
 }

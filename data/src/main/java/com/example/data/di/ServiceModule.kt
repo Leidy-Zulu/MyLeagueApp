@@ -1,5 +1,6 @@
 package com.example.data.di
 
+import com.example.data.service.IEventService
 import com.example.data.service.ILeagueService
 import com.example.data.util.TEN
 import com.example.data.util.URL_BASE
@@ -36,4 +37,8 @@ class ServiceModule {
     @Provides
     @Singleton
     fun provideLeagueService(retrofit: Retrofit): ILeagueService = retrofit.create(ILeagueService::class.java)
+
+    @Provides
+    @Singleton
+    fun provideEventService(retrofit: Retrofit): IEventService = retrofit.create(IEventService::class.java)
 }

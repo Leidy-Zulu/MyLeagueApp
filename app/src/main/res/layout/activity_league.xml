@@ -22,6 +22,9 @@
 
 
     <android.support.v7.widget.CardView
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:id="@+id/cardViewSearh"
         android:layout_width="match_parent"
         android:layout_height="40dp"

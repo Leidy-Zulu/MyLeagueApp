@@ -7,6 +7,7 @@ import com.example.domain.interactos.base.IUseCase
 import com.example.domain.models.Events
 
 import com.example.domain.models.Teams
+import com.example.domain.repositories.IEventRepository
 import com.example.domain.repositories.ILeagueRepository
 import dagger.Module
 import dagger.Provides
@@ -22,6 +23,6 @@ class InteractorsModule {
 
     @Provides
     @Singleton
-    fun provideGetEventsUseCase(iLeagueRepository: ILeagueRepository):
-            IUseCase<Events, Int> = GetEventsInteractor(iLeagueRepository)
+    fun provideGetEventsUseCase(iEventRepository: IEventRepository):
+            IUseCase<Events, Int> = GetEventsInteractor(iEventRepository)
 }

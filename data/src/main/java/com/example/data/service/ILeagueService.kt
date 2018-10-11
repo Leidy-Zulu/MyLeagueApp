@@ -1,6 +1,5 @@
 package com.example.data.service
 
-import com.example.data.model.ApiEvents
 import com.example.data.model.ApiTeams
 import io.reactivex.Observable
 import retrofit2.http.GET
@@ -11,6 +10,4 @@ interface ILeagueService {
     @GET("lookup_all_teams.php")
     fun getTeams(@Query("id") codeTeam: Int) : Observable<ApiTeams>
 
-    @GET("eventsnext.php")
-    fun getEvents(@Query("id")codeEvent: Int): Observable<ApiEvents>
 }

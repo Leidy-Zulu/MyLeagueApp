@@ -7,5 +7,5 @@ import io.reactivex.Observable
 
 interface ILeagueRepository {
     fun getTeams(codeTeam: Int): Observable<Teams>
-    fun getEvents(codeEvent: Int): Observable<Events>
+
 }
