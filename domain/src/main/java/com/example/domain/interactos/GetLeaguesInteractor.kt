@@ -1,6 +1,7 @@
-package com.example.domain.interactos.base
+package com.example.domain.interactos
 
-import com.example.domain.baseinteractor.interactos.UseCase
+
+import com.example.domain.interactos.base.UseCase
 import com.example.domain.models.Teams
 import com.example.domain.repositories.ILeagueRepository
 import io.reactivex.Observable

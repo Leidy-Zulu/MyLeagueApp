@@ -9,4 +9,5 @@ interface ILeagueService {
 
     @GET("lookup_all_teams.php")
     fun getTeams(@Query("id") codeTeam: Int) : Observable<ApiTeams>
+
 }

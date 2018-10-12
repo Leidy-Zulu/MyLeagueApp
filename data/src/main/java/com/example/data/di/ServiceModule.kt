@@ -1,5 +1,6 @@
 package com.example.data.di
 
+import com.example.data.service.IEventService
 import com.example.data.service.ILeagueService
 import com.example.data.util.TEN
 import com.example.data.util.URL_BASE
@@ -18,15 +19,15 @@ class ServiceModule {
     @Provides
     @Singleton
     fun provideBaseService(): Retrofit {
-//        val okHttpClient: OkHttpClient = OkHttpClient.Builder()
-//                .connectTimeout(TEN, TimeUnit.SECONDS)
-//                .writeTimeout(TEN, TimeUnit.SECONDS)
-//                .readTimeout(TEN, TimeUnit.SECONDS)
-//                .build()
+        val okHttpClient: OkHttpClient = OkHttpClient.Builder()
+                .connectTimeout(TEN, TimeUnit.SECONDS)
+                .writeTimeout(TEN, TimeUnit.SECONDS)
+                .readTimeout(TEN, TimeUnit.SECONDS)
+                .build()
 
         return Retrofit.Builder()
                 .baseUrl(URL_BASE)
-                .client(OkHttpClient())
+                .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
@@ -36,4 +37,8 @@ class ServiceModule {
     @Provides
     @Singleton
     fun provideLeagueService(retrofit: Retrofit): ILeagueService = retrofit.create(ILeagueService::class.java)
+
+    @Provides
+    @Singleton
+    fun provideEventService(retrofit: Retrofit): IEventService = retrofit.create(IEventService::class.java)
 }

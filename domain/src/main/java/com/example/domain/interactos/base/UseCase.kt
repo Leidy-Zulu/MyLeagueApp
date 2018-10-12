@@ -1,4 +1,4 @@
-package com.example.domain.baseinteractor.interactos
+package com.example.domain.interactos.base
 
 import io.reactivex.Observable
 import io.reactivex.Scheduler

@@ -4,7 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 
 
-class Team( val id: Int,
+open class Team( val id: Int,
          val name: String?,
          val stadium: String?,
          val badge: String?,
